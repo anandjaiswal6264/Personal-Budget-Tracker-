@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"],
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Add Expense</a>
+            <a href="#">View Budget</a>
+        </nav>
+
+        <div class="content">
+            <p>Welcome to Personal Budget Tracker</p>
+            <p>This Tracker tool helps you manage monthly income and expenses. Enter your income and expenses below, categorize them, and view a summary of your budget.</p>
+
+            <div class="form-container">
+                <h2>Add Income/Expense</h2>
+                <label for="income">Income:</label>
+                <input type="number" id="income" value="0">
+                <label for="expense">Expense:</label>
+                <input type="number" id="expense" value="0">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="food">Food</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="salary">Salary</option>
+                    <option value="savings">Savings</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="housing">Housing</option>
+                    </select>
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+                <div class="radio-group">
+                    <label><input type="radio" name="type" value="income" checked> Income</label>
+                    <label><input type="radio" name="type" value="expense"> Expense</label>
+                </div>
+                <button>Add Entry</button>
+            </div>
+
+            <h2>Budget Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Food</td>
+                        <td>$200</td>
+                        <td>Groceries for the week</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>$100</td>
+                        <td>Monthly bus pass</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Entertainment</td>
+                        <td>$50</td>
+                        <td>Cinema tickets</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Salary</td>
+                        <td>$3000</td>
+                        <td>Monthly salary payment</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Savings</td>
+                        <td>$500</td>
+                        <td>Emergency fund deposit</td>
+                        <td>Pending</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Utilities</td>
+                        <td>$150</td>
+                        <td>Electricity bill</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Utilities</td>
+                        <td>$50</td>
+                        <td>Water bill</td>
+                        <td>Pending</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Housing</td>
+                        <td>$1200</td>
+                        <td>Monthly rent</td>
+                        <td>Completed</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Housing</td>
+                        <td>$300</td>
+                        <td>Maintenance fee</td>
+                        <td>Pending</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>&copy;2024 Personal Budget Tracker. Version 1.0</p>
+        </div>
+    </div>
+</body>
+</html>
